@@ -1,0 +1,10 @@
+<!-- Template for displaying details of a specific order -->
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Order Detail - {{ order }}</h1>
+  <p>Order Status: {{ order.status }}</p>
+  <!-- Display other order details as needed -->
+  <a href="{% url 'process_order' order.pk %}">Process Order</a>
+  <a href="{% url 'update_order_status' order.pk %}">Update Status</a>
+  <a href="{% url 'order_tracking' order.pk %}">Track Order</a>
+{% endblock %}

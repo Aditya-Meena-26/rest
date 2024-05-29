@@ -1,0 +1,7 @@
+<!-- Template for tracking the status of an order -->
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Order Tracking - {{ order }}</h1>
+  <p>Current Status: {{ order.status }}</p>
+  <!-- Display other tracking details as needed -->
+{% endblock %}

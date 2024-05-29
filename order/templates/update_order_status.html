@@ -1,0 +1,11 @@
+<!-- Template for updating the status of an order -->
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Update Order Status - {{ order }}</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="status">New Status:</label>
+    <input type="text" id="status" name="status">
+    <button type="submit">Update Status</button>
+  </form>
+{% endblock %}
